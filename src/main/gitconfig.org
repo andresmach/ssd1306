@@ -1,0 +1,32 @@
+# Filename: gitconfig.org
+# Description:
+# Author: andres Machtey
+#
+# Created: lun jul 22 14:59:03 2024 (-0300)
+#
+# Last-Updated:
+#           By:
+#
+#
+#+TITLE:
+#+AUTHOR:
+#+DATE:
+#+OPTIONS: toc:nil ^:{}
+#+OPTIONS: stat:t todo:nil tags:nil num:nil  % avoid having TODOs
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper, 11pt, oneside]
+*instrucciones
+-git push github master
+-git commit -m photo
+-git add Photo/photo.png
+-git push github master
+-git commit -m "initial commint"
+-git config --global user.name "andresmach"
+-git config --global user.email "andres.machtey@gmail.com"
+-git branch -M master
+-git remote add github git@github.com:andresmach/ssd1306.git
+-github.com:andresmach/ssd1306.git
+-ssh -T git@github.com
+-ssh -T andres.machtey@gmail.com
+-ssh-keygen -t ed25519 -C "andres.machtey@gmail.com"
+-ssh-keygen -t ed25519 -C "andres.machtey@gmail.com"

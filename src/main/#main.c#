@@ -1,0 +1,59 @@
+l/*
+ * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
+ *
+ * SPDX-License-Identifier: CC0-1.0
+ *
+ * For the rest of this article I will focus on the serial interface, I2C.  How do you send commands and data?  Simple.  When you start a transaction you send a control byte which tells the controller what to expect next.  There are four legal control bytes.
+ *    0b10000000 = 0x80 = multiple commands
+ *    0b00000000 = 0x00 = one command
+ *    0b11000000 = 0xC0 = multiple data
+ *    0b01000000 = 0x40 = one data byte
+ *  https://iotexpert.com/debugging-ssd1306-display-problems/   datos de ssd1360
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "driver/i2c.h"
+#include <string.h>
+#include "font8.h"
+#include "dog.h"
+#include "sdkconfig.h"
+#include <math.h>
+#include "ssd1306.c"
+
+
+void app_main()
+{
+     i2c_master_init();
+    ssd1306_init();
+    
+        ssd1306_init();          // Inicializar la pantalla SSD1306
+        ssd1306_clear_display(); // Limpiar la pantalla
+        //ssd1306_start_scroll(true, true, 0, 3, 0x02);
+        // Ejemplo de uso: mostrar un mensaje y luego iniciar el scroll
+        ssd1306_draw_string("Hola Mundo!", 0, 5);
+
+
+         ssd1306_draw_string("como estas?!", 10, 20);
+        vTaskDelay(pdMS_TO_TICKS(2000)); // Esperar 2 segundos
+
+        // Iniciar scroll horizontal hacia la derecha
+
+       // ssd1306_clear_display(); // Limpiar la pantalla
+       // draw_bitmap(dog1, 128, 64);
+       // while (0)
+       // {
+            // Simular volumen aleatorio para el vúmetro
+          //  uint8_t volume = rand() % 101; // Generar un valor de volumen entre 0 y 100
+          //  update_vumeter(volume);
+          //  vTaskDelay(pdMS_TO_TICKS(500)); // Esperar 500 ms antes de actualizar nuevamente
+       // }
+   
+}

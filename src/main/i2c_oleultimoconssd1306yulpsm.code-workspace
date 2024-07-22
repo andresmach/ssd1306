@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"name": "i2c_ole",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"C_Cpp.intelliSenseEngine": "default",
+		"idf.adapterTargetName": "esp32",
+		"idf.customExtraPaths": "/home/oem/.espressif/tools/xtensa-esp-elf-gdb/14.2_20240403/xtensa-esp-elf-gdb/bin:/home/oem/.espressif/tools/riscv32-esp-elf-gdb/14.2_20240403/riscv32-esp-elf-gdb/bin:/home/oem/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:/home/oem/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin:/home/oem/.espressif/tools/esp32ulp-elf/2.35_20220830/esp32ulp-elf/bin:/home/oem/.espressif/tools/cmake/3.24.0/bin:/home/oem/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/bin:/home/oem/.espressif/tools/ninja/1.11.1:/home/oem/.espressif/tools/esp-rom-elfs/20230320",
+		"idf.customExtraVars": {
+			"OPENOCD_SCRIPTS": "/home/oem/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
+			"ESP_ROM_ELF_DIR": "/home/oem/.espressif/tools/esp-rom-elfs/20230320/"
+		},
+		"idf.espIdfPath": "/home/oem/esp/v5.2.2/esp-idf",
+		"idf.openOcdConfigs": [
+			"interface/ftdi/esp32_devkitj_v1.cfg",
+			"target/esp32.cfg"
+		],
+		"idf.pythonBinPath": "/home/oem/.espressif/python_env/idf5.2_py3.10_env/bin/python",
+		"idf.toolsPath": "/home/oem/.espressif",
+		"idf.flashType": "UART",
+		"idf.port": "/dev/ttyUSB0",
+		"files.associations": {
+			"i2c_master.h": "c",
+			"sdkconfig.h": "c",
+			"i2c.h": "c",
+			"adc.h": "c",
+			"UPLSM.C": "cpp",
+			"ulpsm.C": "cpp",
+			"ulpsm.h": "c"
+		}
+	}
+}
